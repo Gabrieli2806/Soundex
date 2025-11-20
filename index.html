@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soundex | Teoría Musical</title>
+    <!-- Fuente Google Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Elementos de fondo para el efecto Glass -->
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Header Superior -->
+    <header class="glass header-top">
+        <div class="header-logo">
+            <i class="fa-solid fa-wave-square"></i> Soundex
+        </div>
+        <div class="header-search">
+            <div class="search-bar">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" placeholder="Buscar tema..." data-i18n-placeholder="header.search">
+            </div>
+        </div>
+        <div class="header-user">
+            <div class="user-profile">
+                <div class="avatar"><i class="fa-solid fa-user"></i></div>
+                <div class="user-info">
+                    <h4 data-i18n="user.title">Estudiante</h4>
+                    <p data-i18n="user.level">Nivel Básico</p>
+                </div>
+            </div>
+            <select id="languageSelect" class="language-toggle" data-i18n-title="common.language">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Panel Lateral (Categorías) -->
+        <aside class="sidebar glass">
+            <nav>
+                <ul>
+                    <li class="nav-item active" data-category="harmony">
+                        <a href="#" class="category-link"><i class="fa-solid fa-book-open"></i> <span data-i18n="nav.learn1">Armonía</span></a>
+                    </li>
+                    <li class="nav-item" data-category="rhythm">
+                        <a href="#" class="category-link"><i class="fa-solid fa-music"></i> <span data-i18n="nav.learn2">Rítmica</span></a>
+                    </li>
+                    <li class="nav-item" data-category="solfege">
+                        <a href="#" class="category-link"><i class="fa-solid fa-guitar"></i> <span data-i18n="nav.learn3">Solfeo</span></a>
+                    </li>
+                    <li class="nav-item" data-category="exercises">
+                        <a href="#" class="category-link"><i class="fa-solid fa-sliders"></i> <span data-i18n="nav.learn4">Ejercicios</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <main class="main-content">
+            <!-- Contenido Dinámico por Categoría -->
+            <div id="category-harmony" class="category-content active">
+                <!-- Sección de Armonía -->
+                <section class="content-grid">
+                    <!-- Tarjeta Grande: Definición Armonía -->
+                    <div class="card glass span-2">
+                        <h2 data-i18n="learning.harmony.title">Armonía</h2>
+                        <p data-i18n="learning.harmony.intro">La armonía es el arte de combinar sonidos simultáneamente para crear acordes y progresiones armónicas que enriquecen la música.</p>
+                        <div class="wave-visual">
+                            <svg viewBox="0 0 500 100">
+                                <path d="M0,50 C100,150 200,-50 300,50 T500,50" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="3" />
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Tarjeta: Acordes Mayores -->
+                    <div class="card glass">
+                        <div class="icon-box"><i class="fa-solid fa-star"></i></div>
+                        <h3 data-i18n="learning.harmony.major">Acordes Mayores</h3>
+                        <p data-i18n="learning.harmony.majorDesc">Sonoridad brillante y positiva</p>
+                        <button class="btn-learn" onclick="openModal('major')" data-i18n="common.learnMore">Aprender Más</button>
+                    </div>
+                    <!-- Tarjeta: Acordes Menores -->
+                    <div class="card glass">
+                        <div class="icon-box"><i class="fa-solid fa-infinity"></i></div>
+                        <h3 data-i18n="learning.harmony.minor">Acordes Menores</h3>
+                        <p data-i18n="learning.harmony.minorDesc">Sonoridad oscura y melancólica</p>
+                        <button class="btn-learn" onclick="openModal('minor')" data-i18n="common.learnMore">Aprender Más</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Categoría Rítmica -->
+            <div id="category-rhythm" class="category-content">
+                <h2 class="section-title" data-i18n="learning.rhythm.title">Rítmica</h2>
+                <section class="content-grid">
+                    <!-- Tarjeta Grande: Definición Rítmica -->
+                    <div class="card glass span-2">
+                        <p data-i18n="learning.rhythm.intro">La rítmica organiza los sonidos en el tiempo, creando patrones regulares que estructuran la música.</p>
+                        <div class="rhythm-visual">
+                            <div class="beat"><span>●</span></div>
+                            <div class="beat"><span>●</span></div>
+                            <div class="beat"><span>●</span></div>
+                            <div class="beat"><span>●</span></div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta: Figuras Rítmicas -->
+                    <div class="card glass">
+                        <div class="icon-box"><i class="fa-solid fa-drum"></i></div>
+                        <h3 data-i18n="learning.rhythm.figures">Figuras Rítmicas</h3>
+                        <p data-i18n="learning.rhythm.description">Descubre las diferentes duraciones de notas</p>
+                        <button class="btn-learn" onclick="openModal('figures')" data-i18n="common.learnMore">Aprender Más</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Categoría Solfeo -->
+            <div id="category-solfege" class="category-content">
+                <h2 class="section-title" data-i18n="learning.solfege.title">Solfeo</h2>
+                <section class="content-grid">
+                    <!-- Piano -->
+                    <div class="card glass instrument-card">
+                        <h3 data-i18n="learning.solfege.notes">Notas Musicales</h3>
+                        <p data-i18n="learning.solfege.point1">Las 7 notas: Do, Re, Mi, Fa, Sol, La, Si</p>
+                        <div class="piano-keys" id="piano">
+                            <div class="key white" data-note="C4"><span>C</span></div>
+                            <div class="key black" data-note="C#4"><span>C#</span></div>
+                            <div class="key white" data-note="D4"><span>D</span></div>
+                            <div class="key black" data-note="D#4"><span>D#</span></div>
+                            <div class="key white" data-note="E4"><span>E</span></div>
+                            <div class="key white" data-note="F4"><span>F</span></div>
+                        </div>
+                        <button class="btn-learn" id="btn-toggle-notes" data-i18n="common.showNotes">Ver Notas</button>
+                    </div>
+                    <!-- Pentagrama -->
+                    <div class="card glass instrument-card">
+                        <h3 data-i18n="learning.solfege.staff">El Pentagrama</h3>
+                        <p data-i18n="learning.solfege.staffPoint1">5 líneas y 4 espacios para escribir notas</p>
+                        <div class="staff-visual">
+                            <svg viewBox="0 0 300 150">
+                                <line x1="20" y1="40" x2="280" y2="40" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+                                <line x1="20" y1="60" x2="280" y2="60" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+                                <line x1="20" y1="80" x2="280" y2="80" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+                                <line x1="20" y1="100" x2="280" y2="100" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+                                <line x1="20" y1="120" x2="280" y2="120" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+                                <text x="35" y="95" font-size="40" fill="rgba(0,212,255,0.8)" font-weight="bold">G</text>
+                                <circle cx="100" cy="80" r="4" fill="rgba(255,255,255,0.8)"/>
+                                <circle cx="130" cy="70" r="4" fill="rgba(255,255,255,0.8)"/>
+                                <circle cx="160" cy="60" r="4" fill="rgba(255,255,255,0.8)"/>
+                            </svg>
+                        </div>
+                        <button class="btn-learn" onclick="openModal('staff')" data-i18n="common.learnMore">Aprender Más</button>
+                    </div>
+                    <!-- Escalas -->
+                    <div class="card glass instrument-card">
+                        <h3 data-i18n="learning.solfege.scales">Escalas</h3>
+                        <p data-i18n="learning.solfege.scalesDesc">Secuencias ordenadas de notas</p>
+                        <div class="scales-visual">
+                            <div class="scale-bar" style="width: 20%;"></div>
+                            <div class="scale-bar" style="width: 30%;"></div>
+                            <div class="scale-bar" style="width: 25%;"></div>
+                            <div class="scale-bar" style="width: 35%;"></div>
+                            <div class="scale-bar" style="width: 40%;"></div>
+                        </div>
+                        <button class="btn-learn" onclick="openModal('scales')" data-i18n="common.learnMore">Aprender Más</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Categoría Ejercicios -->
+            <div id="category-exercises" class="category-content">
+                <h2 class="section-title" data-i18n="nav.learn4">Ejercicios</h2>
+                <section class="content-grid">
+                    <div class="card glass span-2">
+                        <h3>Próximamente</h3>
+                        <p>Los ejercicios interactivos estarán disponibles pronto.</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modales -->
+    <!-- Modal Mayor -->
+    <div id="majorModal" class="modal">
+        <div class="modal-content glass">
+            <button class="modal-close" onclick="closeModal('major')">&times;</button>
+            <h2 class="modal-title" data-i18n="learning.harmony.major">Acordes Mayores</h2>
+            <div class="modal-body">
+                <p data-i18n="learning.harmony.majorDetail">Los acordes mayores tienen una sonoridad brillante, alegre y positiva. Están formados por la tónica, la tercera mayor y la quinta justa.</p>
+                <div class="content-section">
+                    <h4 data-i18n="learning.harmony.composition">Composición</h4>
+                    <ul>
+                        <li data-i18n="learning.harmony.comp1">Tónica (raíz del acorde)</li>
+                        <li data-i18n="learning.harmony.comp2">Tercera Mayor (4 semitonos)</li>
+                        <li data-i18n="learning.harmony.comp3">Quinta Justa (7 semitonos)</li>
+                    </ul>
+                </div>
+                <div class="content-section">
+                    <h4 data-i18n="learning.harmony.examples">Ejemplos</h4>
+                    <p>C Mayor: C - E - G</p>
+                    <p>G Mayor: G - B - D</p>
+                    <p>F Mayor: F - A - C</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Menor -->
+    <div id="minorModal" class="modal">
+        <div class="modal-content glass">
+            <button class="modal-close" onclick="closeModal('minor')">&times;</button>
+            <h2 class="modal-title" data-i18n="learning.harmony.minor">Acordes Menores</h2>
+            <div class="modal-body">
+                <p data-i18n="learning.harmony.minorDetail">Los acordes menores tienen una sonoridad oscura, triste y melancólica. Están formados por la tónica, la tercera menor y la quinta justa.</p>
+                <div class="content-section">
+                    <h4 data-i18n="learning.harmony.composition">Composición</h4>
+                    <ul>
+                        <li data-i18n="learning.harmony.comp1">Tónica (raíz del acorde)</li>
+                        <li data-i18n="learning.harmony.compMinor">Tercera Menor (3 semitonos)</li>
+                        <li data-i18n="learning.harmony.comp3">Quinta Justa (7 semitonos)</li>
+                    </ul>
+                </div>
+                <div class="content-section">
+                    <h4 data-i18n="learning.harmony.examples">Ejemplos</h4>
+                    <p>C Menor: C - D# - G</p>
+                    <p>A Menor: A - C - E</p>
+                    <p>E Menor: E - G - B</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Figuras Rítmicas -->
+    <div id="figuresModal" class="modal">
+        <div class="modal-content glass">
+            <button class="modal-close" onclick="closeModal('figures')">&times;</button>
+            <h2 class="modal-title" data-i18n="learning.rhythm.figures">Figuras Rítmicas</h2>
+            <div class="modal-body">
+                <p data-i18n="learning.rhythm.figuresDetail">Las figuras rítmicas representan la duración de los sonidos en la música.</p>
+                <div class="content-section">
+                    <ul>
+                        <li><strong data-i18n="learning.rhythm.whole">Redonda:</strong> <span data-i18n="learning.rhythm.wholeDesc">Dura 4 tiempos</span></li>
+                        <li><strong data-i18n="learning.rhythm.half">Blanca:</strong> <span data-i18n="learning.rhythm.halfDesc">Dura 2 tiempos</span></li>
+                        <li><strong data-i18n="learning.rhythm.quarter">Negra:</strong> <span data-i18n="learning.rhythm.quarterDesc">Dura 1 tiempo</span></li>
+                        <li><strong data-i18n="learning.rhythm.eighth">Corchea:</strong> <span data-i18n="learning.rhythm.eighthDesc">Dura 1/2 tiempo</span></li>
+                        <li><strong data-i18n="learning.rhythm.sixteenth">Semicorchea:</strong> <span data-i18n="learning.rhythm.sixteenthDesc">Dura 1/4 de tiempo</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Pentagrama -->
+    <div id="staffModal" class="modal">
+        <div class="modal-content glass">
+            <button class="modal-close" onclick="closeModal('staff')">&times;</button>
+            <h2 class="modal-title" data-i18n="learning.solfege.staff">El Pentagrama</h2>
+            <div class="modal-body">
+                <p data-i18n="learning.solfege.staffDetail">El pentagrama es el sistema de notación musical con 5 líneas horizontales donde se escriben las notas.</p>
+                <div class="content-section">
+                    <h4 data-i18n="learning.solfege.structure">Estructura</h4>
+                    <ul>
+                        <li data-i18n="learning.solfege.staffPoint1">El pentagrama tiene 5 líneas y 4 espacios</li>
+                        <li data-i18n="learning.solfege.staffPoint2">Las claves determinan qué notas representan las líneas y espacios</li>
+                        <li data-i18n="learning.solfege.staffPoint3">La clave de sol es la más común para melodía</li>
+                    </ul>
+                </div>
+                <div class="content-section">
+                    <h4 data-i18n="learning.solfege.clefs">Tipos de Claves</h4>
+                    <ul>
+                        <li><strong data-i18n="learning.solfege.treble">Clave de Sol:</strong> <span data-i18n="learning.solfege.trebleDesc">Para voces agudas e instrumentos altos</span></li>
+                        <li><strong data-i18n="learning.solfege.bass">Clave de Fa:</strong> <span data-i18n="learning.solfege.bassDesc">Para voces graves e instrumentos bajos</span></li>
+                        <li><strong data-i18n="learning.solfege.alto">Clave de Do:</strong> <span data-i18n="learning.solfege.altoDec">Para voces medias</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Escalas -->
+    <div id="scalesModal" class="modal">
+        <div class="modal-content glass">
+            <button class="modal-close" onclick="closeModal('scales')">&times;</button>
+            <h2 class="modal-title" data-i18n="learning.solfege.scales">Escalas Musicales</h2>
+            <div class="modal-body">
+                <p data-i18n="learning.solfege.scalesDetailText">Una escala es una secuencia de notas ordenadas ascendente o descendentemente.</p>
+                <div class="content-section">
+                    <h4 data-i18n="learning.solfege.majorScale">Escala Mayor</h4>
+                    <p data-i18n="learning.solfege.majorScaleDesc">Patrón: T - T - ST - T - T - T - ST</p>
+                    <p>Ejemplo: C Mayor = C - D - E - F - G - A - B - C</p>
+                </div>
+                <div class="content-section">
+                    <h4 data-i18n="learning.solfege.minorScale">Escala Menor Natural</h4>
+                    <p data-i18n="learning.solfege.minorScaleDesc">Patrón: T - ST - T - T - ST - T - T</p>
+                    <p>Ejemplo: A Menor = A - B - C - D - E - F - G - A</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
