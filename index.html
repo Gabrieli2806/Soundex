@@ -33,17 +33,21 @@
             </div>
         </div>
         <div class="header-user">
-            <div class="user-profile">
-                <div class="avatar"><i class="fa-solid fa-user"></i></div>
-                <div class="user-info">
-                    <h4 data-i18n="user.title">Estudiante</h4>
-                    <p data-i18n="user.level">Nivel Básico</p>
+            <div class="language-toggle">
+                <button class="lang-btn" id="langBtn">
+                    <i class="fa-solid fa-globe"></i>
+                    <span id="langLabel">Español</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-option" data-lang="es">
+                        <span>Español</span>
+                    </div>
+                    <div class="lang-option" data-lang="en">
+                        <span>English</span>
+                    </div>
                 </div>
             </div>
-            <select id="languageSelect" class="language-toggle" data-i18n-title="common.language">
-                <option value="es">Español</option>
-                <option value="en">English</option>
-            </select>
         </div>
     </header>
 
@@ -103,24 +107,124 @@
 
             <!-- Categoría Rítmica -->
             <div id="category-rhythm" class="category-content">
-                <h2 class="section-title" data-i18n="learning.rhythm.title">Rítmica</h2>
-                <section class="content-grid">
-                    <!-- Tarjeta Grande: Definición Rítmica -->
-                    <div class="card glass span-2">
-                        <p data-i18n="learning.rhythm.intro">La rítmica organiza los sonidos en el tiempo, creando patrones regulares que estructuran la música.</p>
-                        <div class="rhythm-visual">
-                            <div class="beat"><span>●</span></div>
-                            <div class="beat"><span>●</span></div>
-                            <div class="beat"><span>●</span></div>
-                            <div class="beat"><span>●</span></div>
+                <div class="category-header">
+                    <h1 class="category-title" data-i18n="learning.rhythm.title">Rítmica</h1>
+                    <p class="category-subtitle" data-i18n="learning.rhythm.intro">La rítmica organiza los sonidos en el tiempo, creando patrones regulares que estructuran la música.</p>
+                </div>
+
+                <!-- Sección 1: Introducción con Visualización -->
+                <section class="category-section">
+                    <div class="section-content">
+                        <div class="section-text">
+                            <h2>¿Qué es la Rítmica?</h2>
+                            <p>La rítmica es el elemento musical que organiza los sonidos en el tiempo. Es la distribución ordenada de notas y silencios que le da estructura y movimiento a la música. Sin ritmo, la música sería caótica y sin sentido.</p>
+                            <ul class="section-list">
+                                <li>Crea patrones predecibles y reconocibles</li>
+                                <li>Organiza la duración de las notas</li>
+                                <li>Define el compás y la métrica musical</li>
+                                <li>Permite sincronización entre músicos</li>
+                            </ul>
+                        </div>
+                        <div class="section-visual">
+                            <div class="card glass">
+                                <h3>Visualización del Ritmo</h3>
+                                <div class="rhythm-visual">
+                                    <div class="beat"><span>●</span></div>
+                                    <div class="beat"><span>●</span></div>
+                                    <div class="beat"><span>●</span></div>
+                                    <div class="beat"><span>●</span></div>
+                                </div>
+                                <p class="visual-caption">Un patrón rítmico de 4 tiempos</p>
+                            </div>
                         </div>
                     </div>
-                    <!-- Tarjeta: Figuras Rítmicas -->
-                    <div class="card glass">
-                        <div class="icon-box"><i class="fa-solid fa-drum"></i></div>
-                        <h3 data-i18n="learning.rhythm.figures">Figuras Rítmicas</h3>
-                        <p data-i18n="learning.rhythm.description">Descubre las diferentes duraciones de notas</p>
-                        <button class="btn-learn" onclick="openModal('figures')" data-i18n="common.learnMore">Aprender Más</button>
+                </section>
+
+                <!-- Sección 2: Figuras Rítmicas -->
+                <section class="category-section">
+                    <h2>Figuras Rítmicas</h2>
+                    <p class="section-description">Cada figura tiene una duración específica que representa cuánto tiempo dura el sonido.</p>
+                    
+                    <div class="cards-grid">
+                        <div class="card glass rhythm-card">
+                            <div class="card-icon"><i class="fa-solid fa-note-sticky"></i></div>
+                            <h3>Redonda</h3>
+                            <p class="duration-info">4 tiempos</p>
+                            <p class="duration-desc">La nota más larga en un compás de 4/4</p>
+                        </div>
+                        <div class="card glass rhythm-card">
+                            <div class="card-icon"><i class="fa-solid fa-note-sticky"></i></div>
+                            <h3>Blanca</h3>
+                            <p class="duration-info">2 tiempos</p>
+                            <p class="duration-desc">La mitad de una redonda</p>
+                        </div>
+                        <div class="card glass rhythm-card">
+                            <div class="card-icon"><i class="fa-solid fa-note-sticky"></i></div>
+                            <h3>Negra</h3>
+                            <p class="duration-info">1 tiempo</p>
+                            <p class="duration-desc">La unidad de tiempo estándar</p>
+                        </div>
+                        <div class="card glass rhythm-card">
+                            <div class="card-icon"><i class="fa-solid fa-note-sticky"></i></div>
+                            <h3>Corchea</h3>
+                            <p class="duration-info">1/2 tiempo</p>
+                            <p class="duration-desc">Dos corcheas = una negra</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección 3: Compases -->
+                <section class="category-section">
+                    <h2>Compases Comunes</h2>
+                    <p class="section-description">El compás define cuántos tiempos hay en cada grupo de notas.</p>
+                    
+                    <div class="compases-container">
+                        <div class="compas-card">
+                            <div class="compas-number">4/4</div>
+                            <div class="compas-info">
+                                <p><strong>Cuatro cuartos</strong></p>
+                                <p>El más común en música moderna. 4 tiempos por compás.</p>
+                                <div class="beats-demo">
+                                    <span class="beat-pulse">1</span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="compas-card">
+                            <div class="compas-number">3/4</div>
+                            <div class="compas-info">
+                                <p><strong>Tres cuartos</strong></p>
+                                <p>Típico del vals. 3 tiempos por compás.</p>
+                                <div class="beats-demo">
+                                    <span class="beat-pulse">1</span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="compas-card">
+                            <div class="compas-number">2/4</div>
+                            <div class="compas-info">
+                                <p><strong>Dos cuartos</strong></p>
+                                <p>Ritmo ligero y ágil. 2 tiempos por compás.</p>
+                                <div class="beats-demo">
+                                    <span class="beat-pulse">1</span>
+                                    <span>2</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección 4: Aprende Más -->
+                <section class="category-section">
+                    <div class="learn-more-card glass">
+                        <div class="learn-icon"><i class="fa-solid fa-drum"></i></div>
+                        <h2>Figuras Rítmicas Detalladas</h2>
+                        <p>Aprende más sobre las distintas duraciones de notas y cómo se representan en el pentagrama musical.</p>
+                        <button class="btn-learn" onclick="openModal('figures')">Aprender Más</button>
                     </div>
                 </section>
             </div>

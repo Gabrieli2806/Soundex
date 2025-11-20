@@ -1,3 +1,45 @@
+// Language Dropdown Handler
+const langBtn = document.getElementById('langBtn');
+const langDropdown = document.getElementById('langDropdown');
+const langOptions = document.querySelectorAll('.lang-option');
+const langLabel = document.getElementById('langLabel');
+
+if (langBtn) {
+    langBtn.addEventListener('click', () => {
+        langDropdown.classList.toggle('active');
+        langBtn.classList.toggle('active');
+    });
+}
+
+langOptions.forEach(option => {
+    option.addEventListener('click', () => {
+        const lang = option.getAttribute('data-lang');
+        const langText = option.querySelector('span').textContent;
+        
+        // Update label
+        langLabel.textContent = langText;
+        
+        // Mark as selected
+        langOptions.forEach(opt => opt.classList.remove('selected'));
+        option.classList.add('selected');
+        
+        // Close dropdown
+        langDropdown.classList.remove('active');
+        langBtn.classList.remove('active');
+        
+        // Change language
+        setLanguage(lang);
+    });
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.language-toggle')) {
+        langDropdown.classList.remove('active');
+        langBtn.classList.remove('active');
+    }
+});
+
 // Modal Functions
 function openModal(modalType) {
     const modalId = modalType + 'Modal';
