@@ -506,11 +506,17 @@ body {
     border-radius: 15px;
     padding: 25px;
     transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
 }
 
 .compas-card:hover {
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.compas-card:active {
+    transform: scale(0.98);
 }
 
 .compas-number {
@@ -565,12 +571,17 @@ body {
     text-align: center;
     padding: 20px;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .chord-card:hover {
     transform: translateY(-5px);
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+}
+
+.chord-card:active {
+    transform: translateY(-2px);
 }
 
 .chord-icon {
@@ -1080,13 +1091,30 @@ body {
 }
 
 /* Mini Piano Visual */
+.piano-container {
+    overflow-x: auto;
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+.piano-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.piano-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
 .piano-keys {
     display: flex;
     gap: 2px;
     margin-top: 15px;
-    height: 60px;
+    height: 100px;
     position: relative;
-    justify-content: center;
+    justify-content: flex-start;
+    min-width: fit-content;
+    padding: 0 10px;
 }
 
 .key {
@@ -1101,6 +1129,7 @@ body {
     font-weight: bold;
     user-select: none;
     transition: background 0.1s, transform 0.1s;
+    flex-shrink: 0;
 }
 
 .key span {

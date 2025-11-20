@@ -114,25 +114,25 @@
                     <p class="section-description" data-i18n="learning.harmony.chordTypesDesc">Los acordes se clasifican principalmente por su composición y sonoridad.</p>
                     
                     <div class="cards-grid">
-                        <div class="card glass chord-card">
+                        <div class="card glass chord-card" data-chord-type="major">
                             <div class="chord-icon"><i class="fa-solid fa-star"></i></div>
                             <h3 data-i18n="learning.harmony.major">Acorde Mayor</h3>
                             <p class="chord-intervals" data-i18n="learning.harmony.majorIntervals">Tónica + 3M + 5J</p>
                             <p class="chord-description" data-i18n="learning.harmony.majorChordDesc">Sonoridad brillante, alegre y positiva</p>
                         </div>
-                        <div class="card glass chord-card">
+                        <div class="card glass chord-card" data-chord-type="minor">
                             <div class="chord-icon"><i class="fa-solid fa-infinity"></i></div>
                             <h3 data-i18n="learning.harmony.minor">Acorde Menor</h3>
                             <p class="chord-intervals" data-i18n="learning.harmony.minorIntervals">Tónica + 3m + 5J</p>
                             <p class="chord-description" data-i18n="learning.harmony.minorChordDesc">Sonoridad oscura, triste y melancólica</p>
                         </div>
-                        <div class="card glass chord-card">
+                        <div class="card glass chord-card" data-chord-type="augmented">
                             <div class="chord-icon"><i class="fa-solid fa-plus"></i></div>
                             <h3 data-i18n="learning.harmony.augmented">Acorde Aumentado</h3>
                             <p class="chord-intervals" data-i18n="learning.harmony.augmentedIntervals">Tónica + 3M + 5A</p>
                             <p class="chord-description" data-i18n="learning.harmony.augmentedDesc">Sonoridad tensa e inestable</p>
                         </div>
-                        <div class="card glass chord-card">
+                        <div class="card glass chord-card" data-chord-type="diminished">
                             <div class="chord-icon"><i class="fa-solid fa-minus"></i></div>
                             <h3 data-i18n="learning.harmony.diminished">Acorde Disminuido</h3>
                             <p class="chord-intervals" data-i18n="learning.harmony.diminishedIntervals">Tónica + 3m + 5D</p>
@@ -281,7 +281,7 @@
                     <p class="section-description" data-i18n="learning.rhythm.measuresDesc">El compás define cuántos tiempos hay en cada grupo de notas.</p>
                     
                     <div class="compases-container">
-                        <div class="compas-card">
+                        <div class="compas-card" data-measure="4/4">
                             <div class="compas-number">4/4</div>
                             <div class="compas-info">
                                 <p><strong data-i18n="learning.rhythm.fourFour">Cuatro cuartos</strong></p>
@@ -294,7 +294,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="compas-card">
+                        <div class="compas-card" data-measure="3/4">
                             <div class="compas-number">3/4</div>
                             <div class="compas-info">
                                 <p><strong data-i18n="learning.rhythm.threeQuarter">Tres cuartos</strong></p>
@@ -306,7 +306,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="compas-card">
+                        <div class="compas-card" data-measure="2/4">
                             <div class="compas-number">2/4</div>
                             <div class="compas-info">
                                 <p><strong data-i18n="learning.rhythm.twoQuarter">Dos cuartos</strong></p>
@@ -422,6 +422,21 @@
                             <h3 data-i18n="learning.solfege.alterations">Alteraciones</h3>
                             <p class="note-info" data-i18n="learning.solfege.alterationsDesc">Sostenidos y bemoles</p>
                             <p class="note-position" data-i18n="learning.solfege.alterationsPos">Suben o bajan notas un semitono</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección: Piano Interactivo -->
+                <section class="category-section">
+                    <h2 data-i18n="learning.solfege.interactivePiano">Piano Interactivo</h2>
+                    <p class="section-description" data-i18n="learning.solfege.interactivePianoDesc">Toca las teclas para escuchar las notas y ver su posición.</p>
+                    
+                    <div class="card glass piano-container">
+                        <div class="piano-controls">
+                            <button id="btn-toggle-notes" class="btn-secondary">Ver Notas</button>
+                        </div>
+                        <div class="piano-keys" id="piano">
+                            <!-- Keys generated by JS -->
                         </div>
                     </div>
                 </section>
