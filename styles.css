@@ -1017,6 +1017,9 @@ body {
         gap: 10px;
         border-right: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        position: static;
+        top: auto;
+        max-height: none;
     }
 
     .sidebar nav ul {
