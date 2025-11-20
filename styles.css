@@ -468,6 +468,13 @@ body {
     margin-bottom: 15px;
 }
 
+.rhythm-image {
+    width: 100%;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
 .rhythm-card h3 {
     font-size: 18px;
     font-weight: 600;
