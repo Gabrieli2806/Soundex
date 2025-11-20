@@ -76,31 +76,133 @@
         <main class="main-content">
             <!-- Contenido Dinámico por Categoría -->
             <div id="category-harmony" class="category-content active">
-                <!-- Sección de Armonía -->
-                <section class="content-grid">
-                    <!-- Tarjeta Grande: Definición Armonía -->
-                    <div class="card glass span-2">
-                        <h2 data-i18n="learning.harmony.title">Armonía</h2>
-                        <p data-i18n="learning.harmony.intro">La armonía es el arte de combinar sonidos simultáneamente para crear acordes y progresiones armónicas que enriquecen la música.</p>
-                        <div class="wave-visual">
-                            <svg viewBox="0 0 500 100">
-                                <path d="M0,50 C100,150 200,-50 300,50 T500,50" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="3" />
-                            </svg>
+                <div class="category-header">
+                    <h1 class="category-title" data-i18n="learning.harmony.title">Armonía</h1>
+                    <p class="category-subtitle" data-i18n="learning.harmony.intro">La armonía es el arte de combinar sonidos simultáneamente para crear acordes y progresiones armónicas que enriquecen la música.</p>
+                </div>
+
+                <!-- Sección 1: Introducción con Visualización -->
+                <section class="category-section">
+                    <div class="section-content">
+                        <div class="section-text">
+                            <h2 data-i18n="learning.harmony.whatIs">¿Qué es la Armonía?</h2>
+                            <p data-i18n="learning.harmony.explanation">La armonía es la combinación de sonidos simultáneos que crean acordes. Es lo que da profundidad, riqueza y carácter emocional a la música. La armonía es el soporte sobre el cual descansa la melodía.</p>
+                            <ul class="section-list">
+                                <li data-i18n="learning.harmony.feature1">Crea acordes combinando notas simultáneamente</li>
+                                <li data-i18n="learning.harmony.feature2">Define el carácter emocional de la música</li>
+                                <li data-i18n="learning.harmony.feature3">Establece progresiones y estructuras armónicas</li>
+                                <li data-i18n="learning.harmony.feature4">Proporciona soporte para la melodía</li>
+                            </ul>
+                        </div>
+                        <div class="section-visual">
+                            <div class="card glass">
+                                <h3 data-i18n="learning.harmony.visualization">Visualización Armónica</h3>
+                                <div class="harmony-visual">
+                                    <div class="note-circle"><span>C</span></div>
+                                    <div class="note-circle"><span>E</span></div>
+                                    <div class="note-circle"><span>G</span></div>
+                                </div>
+                                <p class="visual-caption" data-i18n="learning.harmony.chordExample">Acorde de Do Mayor (C - E - G)</p>
+                            </div>
                         </div>
                     </div>
-                    <!-- Tarjeta: Acordes Mayores -->
-                    <div class="card glass">
-                        <div class="icon-box"><i class="fa-solid fa-star"></i></div>
-                        <h3 data-i18n="learning.harmony.major">Acordes Mayores</h3>
-                        <p data-i18n="learning.harmony.majorDesc">Sonoridad brillante y positiva</p>
-                        <button class="btn-learn" onclick="openModal('major')" data-i18n="common.learnMore">Aprender Más</button>
+                </section>
+
+                <!-- Sección 2: Tipos de Acordes -->
+                <section class="category-section">
+                    <h2 data-i18n="learning.harmony.chordTypes">Tipos de Acordes</h2>
+                    <p class="section-description" data-i18n="learning.harmony.chordTypesDesc">Los acordes se clasifican principalmente por su composición y sonoridad.</p>
+                    
+                    <div class="cards-grid">
+                        <div class="card glass chord-card">
+                            <div class="chord-icon"><i class="fa-solid fa-star"></i></div>
+                            <h3 data-i18n="learning.harmony.major">Acorde Mayor</h3>
+                            <p class="chord-intervals" data-i18n="learning.harmony.majorIntervals">Tónica + 3M + 5J</p>
+                            <p class="chord-description" data-i18n="learning.harmony.majorChordDesc">Sonoridad brillante, alegre y positiva</p>
+                        </div>
+                        <div class="card glass chord-card">
+                            <div class="chord-icon"><i class="fa-solid fa-infinity"></i></div>
+                            <h3 data-i18n="learning.harmony.minor">Acorde Menor</h3>
+                            <p class="chord-intervals" data-i18n="learning.harmony.minorIntervals">Tónica + 3m + 5J</p>
+                            <p class="chord-description" data-i18n="learning.harmony.minorChordDesc">Sonoridad oscura, triste y melancólica</p>
+                        </div>
+                        <div class="card glass chord-card">
+                            <div class="chord-icon"><i class="fa-solid fa-plus"></i></div>
+                            <h3 data-i18n="learning.harmony.augmented">Acorde Aumentado</h3>
+                            <p class="chord-intervals" data-i18n="learning.harmony.augmentedIntervals">Tónica + 3M + 5A</p>
+                            <p class="chord-description" data-i18n="learning.harmony.augmentedDesc">Sonoridad tensa e inestable</p>
+                        </div>
+                        <div class="card glass chord-card">
+                            <div class="chord-icon"><i class="fa-solid fa-minus"></i></div>
+                            <h3 data-i18n="learning.harmony.diminished">Acorde Disminuido</h3>
+                            <p class="chord-intervals" data-i18n="learning.harmony.diminishedIntervals">Tónica + 3m + 5D</p>
+                            <p class="chord-description" data-i18n="learning.harmony.diminishedDesc">Sonoridad tensa y exótica</p>
+                        </div>
                     </div>
-                    <!-- Tarjeta: Acordes Menores -->
-                    <div class="card glass">
-                        <div class="icon-box"><i class="fa-solid fa-infinity"></i></div>
-                        <h3 data-i18n="learning.harmony.minor">Acordes Menores</h3>
-                        <p data-i18n="learning.harmony.minorDesc">Sonoridad oscura y melancólica</p>
-                        <button class="btn-learn" onclick="openModal('minor')" data-i18n="common.learnMore">Aprender Más</button>
+                </section>
+
+                <!-- Sección 3: Progresiones Armónicas -->
+                <section class="category-section">
+                    <h2 data-i18n="learning.harmony.progressions">Progresiones Armónicas Comunes</h2>
+                    <p class="section-description" data-i18n="learning.harmony.progressionsDesc">Las progresiones son secuencias de acordes que generan movimiento armónico.</p>
+                    
+                    <div class="progression-container">
+                        <div class="progression-card">
+                            <div class="progression-name">I - IV - V - I</div>
+                            <div class="progression-info">
+                                <p><strong data-i18n="learning.harmony.classicProg">Progresión Clásica</strong></p>
+                                <p data-i18n="learning.harmony.classicProgDesc">Una de las más usadas en música popular. Crea movimiento claro hacia la resolución.</p>
+                                <div class="chord-sequence">
+                                    <span class="chord-tag">I</span>
+                                    <span class="chord-arrow">→</span>
+                                    <span class="chord-tag">IV</span>
+                                    <span class="chord-arrow">→</span>
+                                    <span class="chord-tag">V</span>
+                                    <span class="chord-arrow">→</span>
+                                    <span class="chord-tag">I</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progression-card">
+                            <div class="progression-name">vi - IV - I - V</div>
+                            <div class="progression-info">
+                                <p><strong data-i18n="learning.harmony.popProg">Progresión Pop</strong></p>
+                                <p data-i18n="learning.harmony.popProgDesc">Muy común en música pop moderna. Crea una sensación nostálgica y emotiva.</p>
+                                <div class="chord-sequence">
+                                    <span class="chord-tag">vi</span>
+                                    <span class="chord-arrow">→</span>
+                                    <span class="chord-tag">IV</span>
+                                    <span class="chord-arrow">→</span>
+                                    <span class="chord-tag">I</span>
+                                    <span class="chord-arrow">→</span>
+                                    <span class="chord-tag">V</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progression-card">
+                            <div class="progression-name">ii - V - I</div>
+                            <div class="progression-info">
+                                <p><strong data-i18n="learning.harmony.jazzProg">Progresión Jazz</strong></p>
+                                <p data-i18n="learning.harmony.jazzProgDesc">Fundamental en el jazz. Crea tensión y resolución elegante.</p>
+                                <div class="chord-sequence">
+                                    <span class="chord-tag">ii</span>
+                                    <span class="chord-arrow">→</span>
+                                    <span class="chord-tag">V</span>
+                                    <span class="chord-arrow">→</span>
+                                    <span class="chord-tag">I</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección 4: Aprende Más -->
+                <section class="category-section">
+                    <div class="learn-more-card glass">
+                        <div class="learn-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <h2 data-i18n="learning.harmony.learnMoreTitle">Acordes Detallados</h2>
+                        <p data-i18n="learning.harmony.learnMoreDesc">Aprende más sobre la construcción de acordes, inversiones y cómo usarlos en tu música.</p>
+                        <button class="btn-learn" onclick="openModal('chords')" data-i18n="common.learnMore">Aprender Más</button>
                     </div>
                 </section>
             </div>
@@ -231,53 +333,172 @@
 
             <!-- Categoría Solfeo -->
             <div id="category-solfege" class="category-content">
-                <h2 class="section-title" data-i18n="learning.solfege.title">Solfeo</h2>
-                <section class="content-grid">
-                    <!-- Piano -->
-                    <div class="card glass instrument-card">
-                        <h3 data-i18n="learning.solfege.notes">Notas Musicales</h3>
-                        <p data-i18n="learning.solfege.point1">Las 7 notas: Do, Re, Mi, Fa, Sol, La, Si</p>
-                        <div class="piano-keys" id="piano">
-                            <div class="key white" data-note="C4"><span>C</span></div>
-                            <div class="key black" data-note="C#4"><span>C#</span></div>
-                            <div class="key white" data-note="D4"><span>D</span></div>
-                            <div class="key black" data-note="D#4"><span>D#</span></div>
-                            <div class="key white" data-note="E4"><span>E</span></div>
-                            <div class="key white" data-note="F4"><span>F</span></div>
+                <div class="category-header">
+                    <h1 class="category-title" data-i18n="learning.solfege.title">Solfeo</h1>
+                    <p class="category-subtitle" data-i18n="learning.solfege.intro">El solfeo es el arte de leer, escribir e interpretar la música a través del sistema de notación musical.</p>
+                </div>
+
+                <!-- Sección 1: Introducción con Visualización -->
+                <section class="category-section">
+                    <div class="section-content">
+                        <div class="section-text">
+                            <h2 data-i18n="learning.solfege.whatIs">¿Qué es el Solfeo?</h2>
+                            <p data-i18n="learning.solfege.explanation">El solfeo es la práctica de cantar o nombrar las notas musicales usando un sistema estándar. Es el lenguaje universal de la música que permite a los músicos comunicarse, compartir música escrita y desarrollar la precisión auditiva.</p>
+                            <ul class="section-list">
+                                <li data-i18n="learning.solfege.feature1">Desarrolla precisión auditiva y reconocimiento de tonos</li>
+                                <li data-i18n="learning.solfege.feature2">Facilita la lectura de partituras musicales</li>
+                                <li data-i18n="learning.solfege.feature3">Permite comunicación universal entre músicos</li>
+                                <li data-i18n="learning.solfege.feature4">Mejora la memoria musical e intonación</li>
+                            </ul>
                         </div>
-                        <button class="btn-learn" id="btn-toggle-notes" data-i18n="common.showNotes">Ver Notas</button>
+                        <div class="section-visual">
+                            <div class="card glass">
+                                <h3 data-i18n="learning.solfege.visualization">Las 7 Notas Musicales</h3>
+                                <div class="notes-visual">
+                                    <div class="note-name"><span>Do</span></div>
+                                    <div class="note-name"><span>Re</span></div>
+                                    <div class="note-name"><span>Mi</span></div>
+                                    <div class="note-name"><span>Fa</span></div>
+                                    <div class="note-name"><span>Sol</span></div>
+                                    <div class="note-name"><span>La</span></div>
+                                    <div class="note-name"><span>Si</span></div>
+                                </div>
+                                <p class="visual-caption" data-i18n="learning.solfege.notesCaption">Escala diatónica natural</p>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Pentagrama -->
-                    <div class="card glass instrument-card">
-                        <h3 data-i18n="learning.solfege.staff">El Pentagrama</h3>
-                        <p data-i18n="learning.solfege.staffPoint1">5 líneas y 4 espacios para escribir notas</p>
-                        <div class="staff-visual">
-                            <svg viewBox="0 0 300 150">
-                                <line x1="20" y1="40" x2="280" y2="40" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
-                                <line x1="20" y1="60" x2="280" y2="60" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
-                                <line x1="20" y1="80" x2="280" y2="80" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
-                                <line x1="20" y1="100" x2="280" y2="100" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
-                                <line x1="20" y1="120" x2="280" y2="120" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
-                                <text x="35" y="95" font-size="40" fill="rgba(0,212,255,0.8)" font-weight="bold">G</text>
-                                <circle cx="100" cy="80" r="4" fill="rgba(255,255,255,0.8)"/>
-                                <circle cx="130" cy="70" r="4" fill="rgba(255,255,255,0.8)"/>
-                                <circle cx="160" cy="60" r="4" fill="rgba(255,255,255,0.8)"/>
-                            </svg>
+                </section>
+
+                <!-- Sección 2: Notas Musicales -->
+                <section class="category-section">
+                    <h2 data-i18n="learning.solfege.notes">Notas Musicales</h2>
+                    <p class="section-description" data-i18n="learning.solfege.notesDesc">Las 7 notas naturales más sus alteraciones forman el sistema cromático completo.</p>
+                    
+                    <div class="cards-grid">
+                        <div class="card glass note-card">
+                            <div class="note-letter">C</div>
+                            <h3 data-i18n="learning.solfege.noteC">Do</h3>
+                            <p class="note-info" data-i18n="learning.solfege.noteCDesc">Nota tónica, fundamental</p>
+                            <p class="note-position" data-i18n="learning.solfege.noteCPos">Primera nota de la escala</p>
                         </div>
-                        <button class="btn-learn" onclick="openModal('staff')" data-i18n="common.learnMore">Aprender Más</button>
+                        <div class="card glass note-card">
+                            <div class="note-letter">D</div>
+                            <h3 data-i18n="learning.solfege.noteD">Re</h3>
+                            <p class="note-info" data-i18n="learning.solfege.noteDDesc">Segunda del grado</p>
+                            <p class="note-position" data-i18n="learning.solfege.noteDPos">Un tono arriba de Do</p>
+                        </div>
+                        <div class="card glass note-card">
+                            <div class="note-letter">E</div>
+                            <h3 data-i18n="learning.solfege.noteE">Mi</h3>
+                            <p class="note-info" data-i18n="learning.solfege.noteEDesc">Tercera del grado</p>
+                            <p class="note-position" data-i18n="learning.solfege.noteEPos">Un tono arriba de Re</p>
+                        </div>
+                        <div class="card glass note-card">
+                            <div class="note-letter">F</div>
+                            <h3 data-i18n="learning.solfege.noteF">Fa</h3>
+                            <p class="note-info" data-i18n="learning.solfege.noteFDesc">Cuarta del grado</p>
+                            <p class="note-position" data-i18n="learning.solfege.noteFPos">Un semitono arriba de Mi</p>
+                        </div>
+                        <div class="card glass note-card">
+                            <div class="note-letter">G</div>
+                            <h3 data-i18n="learning.solfege.noteG">Sol</h3>
+                            <p class="note-info" data-i18n="learning.solfege.noteGDesc">Quinta del grado</p>
+                            <p class="note-position" data-i18n="learning.solfege.noteGPos">Un tono arriba de Fa</p>
+                        </div>
+                        <div class="card glass note-card">
+                            <div class="note-letter">A</div>
+                            <h3 data-i18n="learning.solfege.noteA">La</h3>
+                            <p class="note-info" data-i18n="learning.solfege.noteADesc">Sexta del grado</p>
+                            <p class="note-position" data-i18n="learning.solfege.noteAPos">Un tono arriba de Sol</p>
+                        </div>
+                        <div class="card glass note-card">
+                            <div class="note-letter">B</div>
+                            <h3 data-i18n="learning.solfege.noteB">Si</h3>
+                            <p class="note-info" data-i18n="learning.solfege.noteBDesc">Séptima del grado</p>
+                            <p class="note-position" data-i18n="learning.solfege.noteBPos">Un tono arriba de La</p>
+                        </div>
+                        <div class="card glass note-card">
+                            <div class="note-letter">♯/♭</div>
+                            <h3 data-i18n="learning.solfege.alterations">Alteraciones</h3>
+                            <p class="note-info" data-i18n="learning.solfege.alterationsDesc">Sostenidos y bemoles</p>
+                            <p class="note-position" data-i18n="learning.solfege.alterationsPos">Suben o bajan notas un semitono</p>
+                        </div>
                     </div>
-                    <!-- Escalas -->
-                    <div class="card glass instrument-card">
-                        <h3 data-i18n="learning.solfege.scales">Escalas</h3>
-                        <p data-i18n="learning.solfege.scalesDesc">Secuencias ordenadas de notas</p>
-                        <div class="scales-visual">
-                            <div class="scale-bar" style="width: 20%;"></div>
-                            <div class="scale-bar" style="width: 30%;"></div>
-                            <div class="scale-bar" style="width: 25%;"></div>
-                            <div class="scale-bar" style="width: 35%;"></div>
-                            <div class="scale-bar" style="width: 40%;"></div>
+                </section>
+
+                <!-- Sección 3: El Pentagrama -->
+                <section class="category-section">
+                    <h2 data-i18n="learning.solfege.staff">El Pentagrama y Claves</h2>
+                    <p class="section-description" data-i18n="learning.solfege.staffDesc">El pentagrama es el sistema de 5 líneas donde se escriben las notas musicales.</p>
+                    
+                    <div class="staff-container">
+                        <div class="staff-card">
+                            <div class="clef-icon">𝄞</div>
+                            <div class="staff-info">
+                                <p><strong data-i18n="learning.solfege.treble">Clave de Sol</strong></p>
+                                <p data-i18n="learning.solfege.trebleDesc">Para voces agudas e instrumentos altos. La segunda línea es Sol.</p>
+                                <p class="usage-info" data-i18n="learning.solfege.trebleUse">Usada en: soprano, tenor, flauta, violín, trompeta</p>
+                            </div>
                         </div>
-                        <button class="btn-learn" onclick="openModal('scales')" data-i18n="common.learnMore">Aprender Más</button>
+                        <div class="staff-card">
+                            <div class="clef-icon">𝄢</div>
+                            <div class="staff-info">
+                                <p><strong data-i18n="learning.solfege.bass">Clave de Fa</strong></p>
+                                <p data-i18n="learning.solfege.bassDesc">Para voces graves e instrumentos bajos. La segunda línea es Fa.</p>
+                                <p class="usage-info" data-i18n="learning.solfege.bassUse">Usada en: bajo, cello, trombone, tuba</p>
+                            </div>
+                        </div>
+                        <div class="staff-card">
+                            <div class="clef-icon">𝄡</div>
+                            <div class="staff-info">
+                                <p><strong data-i18n="learning.solfege.alto">Clave de Do</strong></p>
+                                <p data-i18n="learning.solfege.altoDec">Para voces medias. La tercera línea es Do central.</p>
+                                <p class="usage-info" data-i18n="learning.solfege.altoDu">Usada en: viola, saxo tenor, trompa</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección 4: Escalas -->
+                <section class="category-section">
+                    <h2 data-i18n="learning.solfege.scales">Escalas Musicales</h2>
+                    <p class="section-description" data-i18n="learning.solfege.scalesDesc">Las escalas son secuencias ordenadas de notas que crean una base sonora.</p>
+                    
+                    <div class="scales-container">
+                        <div class="scale-card">
+                            <div class="scale-name" data-i18n="learning.solfege.majorScale">Escala Mayor</div>
+                            <div class="scale-pattern">T - T - ST - T - T - T - ST</div>
+                            <div class="scale-info">
+                                <p data-i18n="learning.solfege.majorScaleDesc">Sonoridad brillante y alegre. Base fundamental de la música occidental.</p>
+                                <p class="scale-example" data-i18n="learning.solfege.majorScaleEx">Ejemplo: C Mayor (Do - Re - Mi - Fa - Sol - La - Si - Do)</p>
+                            </div>
+                        </div>
+                        <div class="scale-card">
+                            <div class="scale-name" data-i18n="learning.solfege.minorScale">Escala Menor Natural</div>
+                            <div class="scale-pattern">T - ST - T - T - ST - T - T</div>
+                            <div class="scale-info">
+                                <p data-i18n="learning.solfege.minorScaleDesc">Sonoridad oscura y melancólica. Muy usada en géneros contemporáneos.</p>
+                                <p class="scale-example" data-i18n="learning.solfege.minorScaleEx">Ejemplo: A Menor (La - Si - Do - Re - Mi - Fa - Sol - La)</p>
+                            </div>
+                        </div>
+                        <div class="scale-card">
+                            <div class="scale-name" data-i18n="learning.solfege.pentatonicScale">Escala Pentatónica</div>
+                            <div class="scale-pattern">T - T - ST+T - T - ST+T</div>
+                            <div class="scale-info">
+                                <p data-i18n="learning.solfege.pentatonicDesc">Escala de 5 notas. Muy presente en música asiática y folk.</p>
+                                <p class="scale-example" data-i18n="learning.solfege.pentatonicEx">Ejemplo: C Pentatónica (Do - Re - Mi - Sol - La - Do)</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección 5: Aprende Más -->
+                <section class="category-section">
+                    <div class="learn-more-card glass">
+                        <div class="learn-icon"><i class="fa-solid fa-music"></i></div>
+                        <h2 data-i18n="learning.solfege.learnMoreTitle">Lecturas y Ejercicios</h2>
+                        <p data-i18n="learning.solfege.learnMoreDesc">Aprende a leer partituras, identifica las notas en el pentagrama y practica solfeo con ejercicios interactivos.</p>
+                        <button class="btn-learn" onclick="openModal('solfege')" data-i18n="common.learnMore">Aprender Más</button>
                     </div>
                 </section>
             </div>
