@@ -68,10 +68,6 @@
                         <a href="#" class="category-link"><i class="fa-solid fa-guitar"></i> <span
                                 data-i18n="nav.learn3">Solfeo</span></a>
                     </li>
-                    <li class="nav-item" data-category="metronome">
-                        <a href="#" class="category-link"><i class="fa-solid fa-drum"></i> <span
-                                data-i18n="nav.learn5">Metrónomo</span></a>
-                    </li>
                     <li class="nav-item" data-category="exercises">
                         <a href="#" class="category-link"><i class="fa-solid fa-sliders"></i> <span
                                 data-i18n="nav.learn4">Ejercicios</span></a>
@@ -371,7 +367,7 @@
                     </div>
                 </section>
 
-                <!-- Sección 4: Práctica Interactiva (Ritmo) -->
+                <!-- Sección: Práctica Interactiva (Ritmo) -->
                 <section class="category-section">
                     <div class="learn-more-card glass"
                         style="background: rgba(255, 0, 122, 0.1); border: 1px solid rgba(255, 0, 122, 0.3);">
@@ -382,7 +378,7 @@
                     </div>
                 </section>
 
-                <!-- Sección 5: Aprende Más -->
+                <!-- Sección 4: Aprende Más -->
                 <section class="category-section">
                     <div class="learn-more-card glass">
                         <div class="learn-icon"><i class="fa-solid fa-drum"></i></div>
@@ -617,103 +613,6 @@
                             el pentagrama y practica solfeo con ejercicios interactivos.</p>
                         <button class="btn-learn" onclick="openModal('solfege')" data-i18n="common.learnMore">Aprender
                             Más</button>
-                    </div>
-                </section>
-            </div>
-
-            <!-- Categoría Metrónomo -->
-            <div id="category-metronome" class="category-content">
-                <div class="category-header">
-                    <h1 class="category-title" data-i18n="tools.metronome.title">Metrónomo Avanzado</h1>
-                    <p class="category-subtitle" data-i18n="tools.metronome.description">Practica con un metrónomo configurable con diferentes compases, tempos y sonidos.</p>
-                </div>
-
-                <section class="category-section">
-                    <div class="card glass metronome-container">
-                        <!-- Display principal -->
-                        <div class="metronome-display">
-                            <div class="bpm-display">
-                                <span id="metronome-bpm" class="bpm-value">120</span>
-                                <span class="bpm-label" data-i18n="tools.metronome.bpm">BPM</span>
-                            </div>
-                            <div class="beat-indicator">
-                                <div id="beat-light" class="beat-light"></div>
-                                <span id="beat-counter" class="beat-counter">1</span>
-                            </div>
-                        </div>
-
-                        <!-- Controles principales -->
-                        <div class="metronome-controls-main">
-                            <button id="metronome-toggle" class="btn-metronome-play" data-i18n="tools.metronome.start">Iniciar</button>
-                            <button id="metronome-reset" class="btn-metronome-reset" data-i18n="tools.metronome.reset">Reiniciar</button>
-                        </div>
-
-                        <!-- Configuración de tempo -->
-                        <div class="metronome-section">
-                            <h3 data-i18n="tools.metronome.tempo">Tempo</h3>
-                            <div class="tempo-controls">
-                                <button id="bpm-decrease" class="btn-metronome-control">−</button>
-                                <input id="bpm-input" type="range" min="40" max="240" value="120" class="bpm-slider">
-                                <button id="bpm-increase" class="btn-metronome-control">+</button>
-                                <input id="bpm-number" type="number" min="40" max="240" value="120" class="bpm-number-input">
-                            </div>
-                        </div>
-
-                        <!-- Configuración de compás -->
-                        <div class="metronome-section">
-                            <h3 data-i18n="tools.metronome.timeSignature">Compás</h3>
-                            <div class="time-signature-grid">
-                                <button class="time-sig-btn" data-beats="2" data-beat-type="4">2/4</button>
-                                <button class="time-sig-btn" data-beats="3" data-beat-type="4">3/4</button>
-                                <button class="time-sig-btn active" data-beats="4" data-beat-type="4">4/4</button>
-                                <button class="time-sig-btn" data-beats="5" data-beat-type="4">5/4</button>
-                                <button class="time-sig-btn" data-beats="6" data-beat-type="8">6/8</button>
-                                <button class="time-sig-btn" data-beats="7" data-beat-type="4">7/4</button>
-                            </div>
-                        </div>
-
-                        <!-- Configuración de sonidos -->
-                        <div class="metronome-section">
-                            <h3 data-i18n="tools.metronome.sounds">Sonidos</h3>
-                            <div class="sound-controls">
-                                <div class="sound-option">
-                                    <label for="accent-toggle">
-                                        <input type="checkbox" id="accent-toggle" checked>
-                                        <span data-i18n="tools.metronome.accentFirst">Acentuar primer pulso</span>
-                                    </label>
-                                </div>
-                                <div class="sound-option">
-                                    <label for="volume-label" data-i18n="tools.metronome.volume">Volumen:</label>
-                                    <input id="volume-slider" type="range" min="0" max="100" value="50" class="volume-slider">
-                                    <span id="volume-value" class="volume-value">50%</span>
-                                </div>
-                                <div class="sound-option">
-                                    <label for="frequency-label" data-i18n="tools.metronome.frequency">Tipo de sonido:</label>
-                                    <select id="sound-type" class="sound-select">
-                                        <option value="beep" data-i18n="tools.metronome.beep">Beep</option>
-                                        <option value="click" data-i18n="tools.metronome.click">Click</option>
-                                        <option value="bell" data-i18n="tools.metronome.bell">Campana</option>
-                                        <option value="wood" data-i18n="tools.metronome.wood">Madera</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Estadísticas -->
-                        <div class="metronome-stats">
-                            <div class="stat-item">
-                                <span class="stat-label" data-i18n="tools.metronome.elapsed">Tiempo:</span>
-                                <span id="elapsed-time" class="stat-value">00:00</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-label" data-i18n="tools.metronome.beatsCount">Pulsos:</span>
-                                <span id="beats-count" class="stat-value">0</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-label" data-i18n="tools.metronome.measuresCount">Compases:</span>
-                                <span id="measures-count" class="stat-value">0</span>
-                            </div>
-                        </div>
                     </div>
                 </section>
             </div>

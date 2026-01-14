@@ -4,8 +4,7 @@ const translations = {
             learn1: 'Armonía',
             learn2: 'Rítmica',
             learn3: 'Solfeo',
-            learn4: 'Ejercicios',
-            learn5: 'Metrónomo'
+            learn4: 'Ejercicios'
         },
         user: {
             title: 'Estudiante',
@@ -176,29 +175,6 @@ const translations = {
             language: 'Idioma',
             learnMore: 'Aprender Más',
             showNotes: 'Ver Notas'
-        },
-        tools: {
-            metronome: {
-                title: 'Metrónomo Avanzado',
-                description: 'Practica con un metrónomo configurable con diferentes compases, tempos y sonidos.',
-                bpm: 'BPM',
-                tempo: 'Tempo',
-                timeSignature: 'Compás',
-                sounds: 'Sonidos',
-                start: 'Iniciar',
-                stop: 'Detener',
-                reset: 'Reiniciar',
-                accentFirst: 'Acentuar primer pulso',
-                volume: 'Volumen:',
-                frequency: 'Tipo de sonido:',
-                beep: 'Beep',
-                click: 'Click',
-                bell: 'Campana',
-                wood: 'Madera',
-                elapsed: 'Tiempo:',
-                beatsCount: 'Pulsos:',
-                measuresCount: 'Compases:'
-            }
         }
     },
     en: {
@@ -206,8 +182,7 @@ const translations = {
             learn1: 'Harmony',
             learn2: 'Rhythm',
             learn3: 'Solfege',
-            learn4: 'Exercises',
-            learn5: 'Metronome'
+            learn4: 'Exercises'
         },
         user: {
             title: 'Student',
@@ -380,29 +355,6 @@ const translations = {
             language: 'Language',
             learnMore: 'Learn More',
             showNotes: 'Show Notes'
-        },
-        tools: {
-            metronome: {
-                title: 'Advanced Metronome',
-                description: 'Practice with a configurable metronome with different time signatures, tempos and sounds.',
-                bpm: 'BPM',
-                tempo: 'Tempo',
-                timeSignature: 'Time Signature',
-                sounds: 'Sounds',
-                start: 'Start',
-                stop: 'Stop',
-                reset: 'Reset',
-                accentFirst: 'Accent first beat',
-                volume: 'Volume:',
-                frequency: 'Sound type:',
-                beep: 'Beep',
-                click: 'Click',
-                bell: 'Bell',
-                wood: 'Wood',
-                elapsed: 'Time:',
-                beatsCount: 'Beats:',
-                measuresCount: 'Measures:'
-            }
         }
     }
 };
